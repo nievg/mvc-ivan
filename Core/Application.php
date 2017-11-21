@@ -32,7 +32,6 @@ class Application{
             ],
             $this->parameters
         );
-
     }
 
 }
