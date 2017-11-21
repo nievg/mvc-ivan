@@ -17,10 +17,21 @@ $significantPart = str_replace(
 );
 
 $uriParts = explode('/', $significantPart);
-var_dump($uriParts);
 
 $controllerName = ucfirst($uriParts[0]);
 $action = $uriParts[1];
 
 $controller = new $controllerName();
 $controller->$action();
+
+// taka se vika funkciq
+call_user_func_array(
+    'ime_na_funkciq',
+    [val,val2,val3]
+);
+
+// taka se vika method na obekt
+call_user_func_array(
+  [obekt , method],
+  [args]
+);
