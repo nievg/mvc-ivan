@@ -18,7 +18,7 @@ $significantPart = str_replace(
 
 $uriParts = explode('/', $significantPart);
 
-$controllerName = ucfirst(array_shift($uriParts));
+$controllerName = array_shift($uriParts);
 $action = array_shift($uriParts);
 
 $app = new \Core\Application(

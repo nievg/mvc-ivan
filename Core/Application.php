@@ -20,7 +20,7 @@ class Application{
 
         $controllerName =
             'Controllers\\'
-            .$this->controllerName
+            .ucfirst($this->controllerName)
             .'Controller';
 
         $controller = new $controllerName();

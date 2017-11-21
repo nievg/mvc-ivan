@@ -24,3 +24,21 @@ profile.php и register.php
 на html-a трябва да му се изпрати т. нар. вю-модел
 <?php /** @var Models\ViewModels\UserProfileViewModel $model */?>
 
+Променяме метода profile на User
+   $model = new UserProfileViewModel($name, $called);
+   require_once 'Views/User/profile.php';
+това обаче е бойлер плейт
+Можем да го абстрактнем като го капсулираме в клас, който се
+занимава с тези неща
+Библиотечен клас View (т.е. трябва да е в Core)
+Този клас изпълнява бизнес логика и е добре да имплементира
+интерфейс например ViewInterface
+Тъй като се очаква mvc да се разрастне папката Core ще се пълни
+експоненциално за това е добре да се раздели на namespaces
+В папката Core създаваме папка View и в нея преместваме класа View
+заедно с интерфейса му ViewInterface
+
+---
+ucfirst е добре да не е в index.php, а в Application.php
+
+
