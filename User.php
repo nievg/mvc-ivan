@@ -2,8 +2,8 @@
 
 class User{
 
-    public function profile($name){
-        echo "<h1>Ti si v profila na $name</h1>";
+    public function profile(string $name, string $called){
+        echo "<h1>Ti si v profila na $name a pak ti si $called</h1>";
     }
 
     public function register(){

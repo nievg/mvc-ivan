@@ -18,20 +18,18 @@ $significantPart = str_replace(
 
 $uriParts = explode('/', $significantPart);
 
-$controllerName = ucfirst($uriParts[0]);
-$action = $uriParts[1];
+$controllerName = ucfirst(array_shift($uriParts));
+$action = array_shift($uriParts);
 
 $controller = new $controllerName();
-$controller->$action();
 
-// taka se vika funkciq
-call_user_func_array(
-    'ime_na_funkciq',
-    [val,val2,val3]
-);
+//$a = array_shift($arr); - присвоява първия елемент от масива
+//на променливата а и го изтрива от масива
 
-// taka se vika method na obekt
 call_user_func_array(
-  [obekt , method],
-  [args]
+  [
+      $controller,
+      $action
+  ],
+  $uriParts
 );
