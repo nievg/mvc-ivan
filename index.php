@@ -21,3 +21,10 @@ $uriParts = explode('/', $significantPart);
 $controllerName = ucfirst(array_shift($uriParts));
 $action = array_shift($uriParts);
 
+$app = new \Core\Application(
+    $controllerName,
+    $action,
+    $uriParts
+);
+
+$app->start();

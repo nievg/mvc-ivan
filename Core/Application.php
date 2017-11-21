@@ -4,15 +4,15 @@ namespace Core;
 
 class Application{
     private $controllerName;
-    private $action;
+    private $actionName;
     private $parameters;
 
     public function __construct(string $controllerName,
-                                string $action,
+                                string $actionName,
                                 array $parameters)
     {
         $this->controllerName = $controllerName;
-        $this->action = $action;
+        $this->actionName = $actionName;
         $this->parameters = $parameters;
     }
 
@@ -22,7 +22,7 @@ class Application{
         call_user_func_array(
             [
                 $controller,
-                $this->action
+                $this->actionName
             ],
             $this->parameters
         );
