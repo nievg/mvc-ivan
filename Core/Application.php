@@ -17,7 +17,13 @@ class Application{
     }
 
     public function start(){
-        $controller = new $this->controllerName();
+
+        $controllerName =
+            'Controllers\\'
+            .$this->controllerName
+            .'Controller';
+
+        $controller = new $controllerName();
 
         call_user_func_array(
             [
