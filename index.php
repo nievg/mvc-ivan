@@ -8,7 +8,14 @@ $junk = str_replace(
     '',
     $_SERVER['PHP_SELF']
 );
+var_dump($junk);
 
+$significantPart = str_replace(
+    $junk,
+    '',
+    $uri
+);
+var_dump($junk);
 
 
 
