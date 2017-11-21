@@ -40,5 +40,18 @@ profile.php и register.php
 
 ---
 ucfirst е добре да не е в index.php, а в Application.php
+---
+PhpStorm : auto-generate methods of the implemented interface
+You could try ALT+ENTER.
+This normaly shows up a small "dialog" to autogenerate phpdoc,
+functions, etc.
+---
+
+Добре би било, когато вютата следват конвенция
+views/controllerName/action.php
+да не се налага да ги изписваме
+За това създаваме прпъртита в класа View
+private $controllerName;
+private $actionName;
 
 

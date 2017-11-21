@@ -1,1 +1,1 @@
-<?php
+<h1>Ti si v reg formulqra</h1>
