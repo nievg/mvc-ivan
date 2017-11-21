@@ -17,13 +17,11 @@ class UserController{
 
     public function profile( $name, $called){
         $model = new UserProfileViewModel($name, $called);
-        $view = new View();
-        $view->render('User/profile', $model);
+        $this->view->render('User/profile', $model);
     }
 
     public function register(){
-        $view = new View();
-        $view->render('User/register');
+        $this->view->render();
     }
 
 }
