@@ -23,4 +23,4 @@ $controllerName = ucfirst($uriParts[0]);
 $action = $uriParts[1];
 
 $controller = new $controllerName();
-var_dump($controller);
+$controller->$action();
