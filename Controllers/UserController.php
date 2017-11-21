@@ -1,6 +1,8 @@
 <?php
 
-class User{
+namespace Controllers;
+
+class UserController{
 
     public function profile(string $name, string $called){
         echo "<h1>Ti si v profila na $name a pak ti si $called</h1>";
