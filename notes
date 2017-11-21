@@ -14,4 +14,13 @@ http хенлърите т.е.
 Да има папка с името на контролерчето
 и html-и с името на методите
 
+В папката View създаваме папка User
+В папката User създаваме файловете
+profile.php и register.php
+Преместваме html-a от метода profile на User
+във файла profile.php
+В този html има две променливи ($name и $called) т.е. те
+трябва да му бъдат пратени, което директно означава, че
+на html-a трябва да му се изпрати т. нар. вю-модел
+<?php /** @var Models\ViewModels\UserProfileViewModel $model */?>
 

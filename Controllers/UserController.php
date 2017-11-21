@@ -2,10 +2,13 @@
 
 namespace Controllers;
 
+use Models\ViewModels\UserProfileViewModel;
+
 class UserController{
 
-    public function profile(string $name, string $called){
-        echo "<h1>Ti si v profila na $name a pak ti si $called</h1>";
+    public function profile( $name, $called){
+        $model = new UserProfileViewModel($name, $called);
+        require_once 'Views/User/profile.php';
     }
 
     public function register(){
